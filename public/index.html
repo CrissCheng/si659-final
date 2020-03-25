@@ -20,6 +20,9 @@
     <script src="https://mozilla.github.io/aframe-xr/dist/aframe-xr.js"></script>
     <!-- including A-Frame event-set component for basic interactivity -->
     <script src="https://unpkg.com/aframe-event-set-component/dist/aframe-event-set-component.min.js"></script>
+    <!-- adding physics    -->
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+
     <!--   include hit-test   -->
     <script src="./lib/hit-test.js"></script>
     <script src="./lib/hit-add.js"></script>
@@ -27,7 +30,10 @@
   </head>
   
   <body>
-    <a-scene hit-test hit-add>
+    <a-scene hit-test hit-add xr physics="restitution:0.6" arjs="debugUIEnabled: false">
+      <a-asset>
+        <a-asset-items id="lego1" src="https://raw.githubusercontent.com/CrissCheng/si659-final/master/assets/lego/scene.gltf"> </a-asset-items>
+      </a-asset>
     </a-scene>
 
     
