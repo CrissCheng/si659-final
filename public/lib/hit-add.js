@@ -3,22 +3,25 @@ AFRAME.registerComponent('hit-add', {
     var scene = AFRAME.scenes[0];
     var newObject = function(data) {
       var entity = data.detail;
+        entity.setAttribute("gltf-model","#lego1")
+        entity.setAttribute("scale", "0.01 0.01 0.01")
+        entity.setAttribute("dynamic-body")
 
-      entity.setAttribute("geometry", {
-        primitive: "box",
-        width: 0.1,
-        height: 0.1,
-        depth: 0.1
-      });
+//       entity.setAttribute("geometry", {
+//         primitive: "box",
+//         width: 0.1,
+//         height: 0.1,
+//         depth: 0.1
+//       });
 
-      entity.setAttribute("material", {
-        shader: "standard",
-        transparent: true,
-        opacity: 0.45,
-        fog: false,
-        color: "#ffcc00"
-      });
-
+//       entity.setAttribute("material", {
+//         shader: "standard",
+//         transparent: true,
+//         opacity: 0.45,
+//         fog: false,
+//         color: "#ffcc00"
+//       });
+      
       scene.appendChild(entity);
       };
     
